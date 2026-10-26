@@ -1,0 +1,15 @@
+# Disable PHP execution
+php_flag engine off
+
+# Security - deny access to all files
+Deny from all
+
+# But allow access to images
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Prevent script execution
+AddHandler cgi-script .php .php5 .phtml .pl .py .jsp .asp .aspx .sh .cgi
+Options -ExecCGI

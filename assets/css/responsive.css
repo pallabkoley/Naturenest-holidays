@@ -1,0 +1,218 @@
+/* =========================================================
+   NATURE NEST HOLIDAYS — RESPONSIVE (MASTER FIX)
+   ========================================================= */
+
+@media (max-width:1199px){
+  .section{padding:82px 0}
+  .pkg-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .contact-grid{gap:44px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .detail-layout{grid-template-columns:1fr}
+  .detail-sidebar{position:static}
+}
+
+@media (max-width:991px){
+  /* ১. হেডার এবং মেনুকে সবার উপরে রাখার জন্য z-index */
+  .site-header {
+    z-index: 10000 !important;
+  }
+
+  /* ২. হ্যামবার্গার বাটন মেনুর চেয়েও উপরে থাকবে */
+  .nav-toggle{
+    display:flex !important;
+    position:relative !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+  }
+
+  .header-cta{display:none !important}
+
+  /* ৩. মোবাইল মেনু স্লাইড ইফেক্ট (right পজিশন দিয়ে) */
+  .main-nav{
+    position:fixed !important;
+    top:0 !important;
+    right:-100% !important;
+    width:100% !important;
+    max-width:320px !important;
+    height:100vh !important;
+    background:#fff !important;
+    z-index: 99999 !important;
+    transition: right 0.4s ease !important;
+    display:flex !important;
+    flex-direction:column !important;
+    padding:96px 28px 40px !important;
+    box-shadow:-14px 0 44px rgba(15,61,46,.16) !important;
+    overflow-y:auto !important;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  /* ৪. ক্লিক করলে মেনু ডানদিক থেকে স্ক্রিনে আসবে */
+  .main-nav.is-open{
+    right: 0 !important;
+  }
+
+  .nav-list{flex-direction:column;align-items:stretch;gap:0; width: 100% !important;}
+  .nav-list li{border-bottom:1px solid var(--line)}
+
+  .nav-link{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    padding:17px 2px;
+    font-size:1rem;
+    color: #294536 !important;
+  }
+
+  .nav-link::after{display:none}
+
+  /* =========================================================
+     মেগা মেনু (Mega Menu) মোবাইলের জন্য ফিক্স
+     ========================================================= */
+  .site-header .mega-menu-wrapper {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 0 !important;
+    display: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+
+  .site-header .has-mega-menu.is-open .mega-menu-wrapper {
+    display: block !important;
+  }
+
+  .site-header .mega-menu {
+    flex-direction: column !important;
+    max-height: none !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .site-header .mega-menu-left {
+    width: 100% !important;
+    border-right: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .site-header .mega-left-item a {
+    padding: 12px 15px !important;
+    border-bottom: 1px solid #EFE5C7 !important;
+    border-radius: 0 !important;
+    color: #294536 !important;
+  }
+
+  .site-header .mega-menu-right {
+    display: none !important;
+    padding: 0 0 0 15px !important;
+    background: #F5EFDE !important;
+  }
+
+  .site-header .mega-left-item.is-open .mega-menu-right {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .site-header .mega-right-link {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #EFE5C7 !important;
+    border-radius: 0 !important;
+    padding: 12px 15px !important;
+    color: #294536 !important;
+  }
+
+  /* ব্যাকড্রপ — site-header (z-index 1000) এর নিচে থাকবে, তাই মেনু কখনো ঢাকা পড়বে না */
+  .nav-backdrop {
+    z-index: 900 !important;
+  }
+
+  /* বডি স্ক্রল বন্ধ */
+  body.no-scroll { overflow: hidden !important; }
+
+  .hero-nav{width:44px;height:44px}
+  .hero-nav.prev{left:16px}
+  .hero-nav.next{right:16px}
+  .hero-body{padding:70px 0 100px}
+
+  .dest-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .exp-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr;gap:0;max-width:520px;margin-inline:auto}
+  .step{display:grid;grid-template-columns:68px 1fr;gap:22px;text-align:left;padding-bottom:34px}
+  .step:last-child{padding-bottom:0}
+  .step-num{margin:0}
+  .contact-grid{grid-template-columns:1fr;gap:44px}
+  .form-card{padding:34px 28px 30px}
+  .booking-card{padding:34px 28px}
+  .split{grid-template-columns:1fr;gap:34px;margin-bottom:60px}
+  .split.reverse .split-media{order:0}
+  .page-hero{min-height:320px;padding:90px 0 70px}
+}
+
+@media (max-width:767px){
+  :root{--header-h:70px}
+  .container{padding-inline:20px}
+  .section{padding:64px 0}
+  .section-head{margin-bottom:40px}
+
+  .hero-body{min-height:78vh;padding:60px 0 96px}
+  .hero-body h1{max-width:none;font-size:clamp(1.85rem,7vw,2.4rem)}
+  .hero-body p{font-size:.98rem}
+  .hero-actions{flex-direction:column;align-items:stretch;max-width:320px}
+  .hero-actions .btn{width:100%}
+  .hero-nav{display:none}
+  .hero-dots{bottom:28px}
+
+  .dest-grid,.pkg-grid,.why-grid,.exp-grid,.testi-grid{grid-template-columns:1fr;gap:22px}
+  .exp-card{aspect-ratio:16/11}
+  .wedding{padding:80px 0;background-attachment:scroll;min-height:auto}
+  .wedding-stats{gap:28px;margin-top:38px;padding-top:28px}
+  .wedding-stats strong{font-size:1.6rem}
+  .cta{padding:76px 0;background-attachment:scroll}
+  .cta-actions{flex-direction:column;align-items:stretch;max-width:300px;margin-inline:auto}
+  .cta-actions .btn{width:100%}
+  .form-card{padding:28px 22px 26px}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .booking-card{padding:28px 22px}
+  .step-actions{flex-direction:column-reverse}
+  .step-actions .btn{width:100%}
+  .stepper-item{padding:8px 14px;font-size:.78rem}
+  .step{grid-template-columns:56px 1fr;gap:18px}
+  .step-num{width:56px;height:56px;font-size:1.15rem}
+  .footer-grid{grid-template-columns:1fr;gap:34px;padding-bottom:40px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px;padding-inline:0}
+  .to-top{right:18px;bottom:18px;width:44px;height:44px}
+  .pkg-actions{flex-direction:column}
+  .pkg-actions .btn{width:100%}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .stat{padding:24px 16px}
+  .stat strong{font-size:1.8rem}
+  .page-hero{min-height:260px;padding:70px 0 50px}
+  .page-hero h1{font-size:clamp(1.6rem,7vw,2.2rem)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .itinerary-day{width:36px;height:36px;font-size:.9rem}
+}
+
+@media (max-width:480px){
+  .brand-name{font-size:1.08rem}
+  .brand-sub{font-size:.56rem;letter-spacing:.24em}
+  .logo-mark{width:36px;height:36px}
+  .btn{padding:13px 22px;font-size:.88rem}
+  .hero-body h1{font-size:1.85rem}
+  .stats-grid{grid-template-columns:1fr}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  .hero-slide.is-active .hero-img{transform:none}
+  .reveal{opacity:1;transform:none}
+}

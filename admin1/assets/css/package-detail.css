@@ -1,0 +1,457 @@
+
+/* Package Hero Section - Unique Class Names */
+.package-detail-hero-slider {
+    height: calc(100vh - 70px);
+    min-height: 500px;
+    max-height: 700px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -20px;
+    width: 100%;
+}
+
+.package-detail-hero-slider .carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.package-detail-hero-slider .package-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.package-detail-hero-slider .package-slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+    z-index: 1;
+}
+
+.package-detail-hero-slider .package-slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+    z-index: 2;
+}
+
+/* SOLUTION 1: Limit content width + align left */
+.package-detail-hero-slider .package-hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+}
+
+/* SOLUTION 2: Make title section tighter */
+.package-detail-hero-slider .package-hero-title {
+    max-width: 900px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+}
+
+.package-detail-hero-slider .package-hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.package-detail-hero-slider .package-hero-badge {
+    background: rgba(255, 186, 90, 0.9);
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* SOLUTION 3: Convert stats into proper card-style row */
+.package-detail-hero-slider .package-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 1.5rem;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+    width: fit-content;
+}
+
+/* SOLUTION 4: Make each stat look like a block */
+.package-detail-hero-slider .package-stat-item {
+    text-align: center;
+    min-width: 120px;
+}
+
+.package-detail-hero-slider .package-stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffba5a;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.package-detail-hero-slider .package-stat-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+}
+
+/* SOLUTION 5: Make price stand out more */
+.package-detail-hero-slider .package-stat-item:last-child .package-stat-number {
+    color: #00ffb3;
+}
+
+/* Carousel Controls */
+.package-detail-hero-slider .carousel-control-prev,
+.package-detail-hero-slider .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 186, 90, 0.8);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.package-detail-hero-slider .carousel-control-prev:hover,
+.package-detail-hero-slider .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.package-detail-hero-slider .carousel-control-prev {
+    left: 2rem;
+}
+
+.package-detail-hero-slider .carousel-control-next {
+    right: 2rem;
+}
+
+.package-detail-hero-slider .carousel-indicators {
+    bottom: 2rem;
+    margin: 0;
+    z-index: 3;
+}
+
+.package-detail-hero-slider .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.package-detail-hero-slider .carousel-indicators button.active {
+    background-color: #ffba5a;
+}
+
+/* Quick Stats Section */
+.package-quick-stats {
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.package-quick-stats .package-stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.package-quick-stats .package-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.package-quick-stats .package-stat-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ffba5a 0%, #ff9a2e 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.package-quick-stats .package-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.package-quick-stats .package-stat-label {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Package Details Styles */
+.package-details-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
+}
+
+.package-section-title {
+    color: #333;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.package-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #ffba5a 0%, #ff9a2e 100%);
+    border-radius: 2px;
+}
+
+.package-overview-content {
+    background: #f8f9fa;
+    border-left: 4px solid #ffba5a;
+    padding: 1.5rem !important;
+}
+
+.package-tour-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    height: 100%;
+}
+
+.package-tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.package-tour-content {
+    background: white;
+}
+
+.package-tour-title {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Booking Section */
+.package-booking-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    padding: 3rem 0;
+}
+
+.package-price-display {
+    color: #ffba5a;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 3.5rem;
+}
+
+.package-feature-item {
+    border: 1px solid rgba(255, 186, 90, 0.3);
+    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.package-feature-item:hover {
+    transform: translateY(-5px);
+    border-color: #ffba5a;
+}
+
+/* FAQ Section */
+.package-faq-section {
+    background: #f8f9fa;
+    padding: 3rem 0;
+}
+
+/* SOLUTION 6: Improve mobile layout */
+@media (max-width: 768px) {
+    .package-detail-hero-slider .package-hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .package-detail-hero-slider .package-stat-item {
+        min-width: 100px;
+    }
+    
+    .package-detail-hero-slider .package-stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .package-detail-hero-slider .package-stat-label {
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .package-detail-hero-slider {
+        height: calc(100vh - 70px);
+        min-height: 400px;
+        max-height: 600px;
+    }
+    
+    .package-detail-hero-slider .package-hero-title {
+        font-size: 2.5rem;
+        max-width: 700px;
+    }
+    
+    .package-detail-hero-slider .package-hero-subtitle {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+    
+    .package-detail-hero-slider .package-hero-content {
+        max-width: 90%;
+    }
+    
+    .package-quick-stats {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .package-detail-hero-slider {
+        height: calc(100vh - 70px);
+        min-height: 350px;
+        max-height: 500px;
+    }
+    
+    .package-detail-hero-slider .package-slide-content {
+        padding: 2rem;
+    }
+    
+    .package-detail-hero-slider .package-hero-title {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+    
+    .package-detail-hero-slider .package-hero-subtitle {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    
+    .package-detail-hero-slider .carousel-control-prev,
+    .package-detail-hero-slider .carousel-control-next {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .package-detail-hero-slider .carousel-control-prev {
+        left: 1rem;
+    }
+    
+    .package-detail-hero-slider .carousel-control-next {
+        right: 1rem;
+    }
+    
+    .package-quick-stats {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .package-detail-hero-slider {
+        height: calc(100vh - 70px);
+        min-height: 300px;
+        max-height: 450px;
+    }
+    
+    .package-detail-hero-slider .package-slide-content {
+        padding: 1.5rem;
+    }
+    
+    .package-detail-hero-slider .package-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .package-detail-hero-slider .package-hero-stats {
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+    
+    .package-detail-hero-slider .package-stat-item {
+        min-width: 70px;
+    }
+    
+    .package-detail-hero-slider .package-stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .package-quick-stats {
+        margin-top: -15px;
+    }
+    
+    .package-quick-stats .package-stat-card {
+        padding: 1rem;
+    }
+    
+    .package-quick-stats .package-stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .package-quick-stats .package-stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .package-price-display {
+        font-size: 2.5rem;
+    }
+}
+
+/* Ensure content visibility */
+.package-detail-hero-slider .carousel-item {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.package-detail-hero-slider .carousel-item.active {
+    opacity: 1;
+}
+
+/* Remove forced display - important! */
+/* SOLUTION: Remove this problematic rule */
+/*
+.package-detail-hero-slider,
+.package-detail-hero-slider * {
+    display: block !important;
+    visibility: visible !important;
+}
+*/

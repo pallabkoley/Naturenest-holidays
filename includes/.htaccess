@@ -1,0 +1,9 @@
+# Deny all access to includes directory
+Order deny,allow
+Deny from all
+
+# Allow PHP includes
+<Files ~ "\.(inc|php)$">
+    Order allow,deny
+    Allow from all
+</Files>

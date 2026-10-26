@@ -1,0 +1,36 @@
+/* Font Awesome Fallback - Basic Icons */
+.fa, .fas, .far, .fal, .fad, .fab {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+/* Login Page Icons */
+.fa-user-shield:before { content: "👤"; }
+.fa-exclamation-circle:before { content: "⚠"; }
+.fa-check-circle:before { content: "✓"; }
+.fa-clock:before { content: "🕒"; }
+.fa-user:before { content: "👤"; }
+.fa-lock:before { content: "🔒"; }
+.fa-eye:before { content: "👁"; }
+.fa-eye-slash:before { content: "👁"; }
+.fa-key:before { content: "🔑"; }
+.fa-sign-in-alt:before { content: "→"; }
+.fa-info-circle:before { content: "ℹ"; }
+.fa-exclamation-triangle:before { content: "⚠"; }
+
+/* Dashboard Icons */
+.fa-compass:before { content: "🧭"; }
+.fa-user-circle:before { content: "👤"; }
+.fa-tachometer-alt:before { content: "📊"; }
+.fa-map-marked-alt:before { content: "📍"; }
+.fa-mountain:before { content: "⛰"; }
+.fa-calendar-check:before { content: "📅"; }
+.fa-comment-dots:before { content: "💬"; }
+.fa-envelope:before { content: "✉"; }
+.fa-cog:before { content: "⚙"; }
+.fa-sign-out-alt:before { content: "←"; }
+.fa-home:before { content: "🏠"; }
+.fa-plus:before { content: "+"; }
+.fa-bolt:before { content: "⚡"; }
+.fa-info-circle:before { content: "ℹ"; }
+.fa-spinner:before { content: "⟳"; }

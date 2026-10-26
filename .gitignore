@@ -1,0 +1,39 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.env
+
+# Database and admin credentials
+config.local.php
+db.local.php
+includes/config.php
+admin_credentials*.txt
+*credentials*.txt
+*credentials*.log
+
+# Logs and runtime files
+*.log
+error_log
+logs/
+sessions/
+tmp/
+cache/
+
+# PHP/application runtime
+.phpunit.result.cache
+.php_cs.cache
+.phpstan.cache
+
+# Uploads and generated content
+# Note: application uploads are retained unless explicitly requested.
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies (if added later)
+/vendor/
+/node_modules/
